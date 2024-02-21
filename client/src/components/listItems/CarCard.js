@@ -21,7 +21,7 @@ const CarCard = ({ car }) => {
         />
       ) : (
         <Card
-        style={{ marginTop: 16,  width: '800px'}}
+        style={{ marginTop: 16,  width: '800px', justifyContent:"center"}}
         type="inner"
         title={`${year} ${make} ${model} -> $ ${price.toLocaleString()}`}
         actions={[

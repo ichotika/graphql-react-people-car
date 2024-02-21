@@ -57,7 +57,6 @@ const UpdatePerson = props => {
       <Form.Item shouldUpdate={true}>
       {() => (
         <Button
-          // form={form}
           type='primary'
           htmlType='submit'
           disabled={

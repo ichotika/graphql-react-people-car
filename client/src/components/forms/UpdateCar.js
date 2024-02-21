@@ -11,7 +11,7 @@ const UpdateCar = ({car, onButtonClick}) => {
     
     const { loading, error, data } = useQuery(GET_PEOPLE)
     const [people, setPeople] = useState([]);
-    console.log('print people from update car ',data)
+    // console.log('print people from update car ',data)
     useEffect(() => {
         if (data && data.people) {
           const options = data.people.map((person) => ({
@@ -56,11 +56,13 @@ const UpdateCar = ({car, onButtonClick}) => {
   };
 
   return (
+    <div>
     <Form
       form={form}
       name='update-car-form'
       layout='inline'
       onFinish={onFinish}
+      style={{ marginBottom: '40px', justifyContent:"center", gap: "1rem" }}
       initialValues={{
         year,
         make, 
@@ -112,7 +114,6 @@ const UpdateCar = ({car, onButtonClick}) => {
         <Form.Item shouldUpdate={true}>
         {() => (
           <Button
-            // form={form}
             type='primary'
             htmlType='submit'
             disabled={
@@ -130,6 +131,7 @@ const UpdateCar = ({car, onButtonClick}) => {
       </Form.Item>
       <Button onClick={onButtonClick}>Cancel</Button>
     </Form>
+    </div>
   )
 }
 

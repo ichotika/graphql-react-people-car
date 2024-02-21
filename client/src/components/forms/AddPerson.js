@@ -39,15 +39,12 @@ const AddPerson = () => {
   };
 
   return (
-    <div>
-      <Divider orientation="center" style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
-        Add Person
-        </Divider>
+    <div style={{display:"flex"}}>
       <Form
         name='add-person-form'
         layout='inline'
         size='large'
-        style={{ marginBottom: '40px' }}
+        style={{ marginBottom: '40px' , justifyContent:"center", gap: "1rem" }}
         form={form}
         onFinish={onFinish}
       >
@@ -84,12 +81,5 @@ const AddPerson = () => {
   );
 };
 
-const getStyles = () => ({
-  title: {
-    fontSize: 20,
-    padding: '15px',
-    // marginBottom: '50px'
-  },
-});
 
 export default AddPerson;

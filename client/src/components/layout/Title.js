@@ -7,8 +7,6 @@ const Title = () => {
 const getStyles = () => ({
   title: {
     fontSize: 20,
-    padding: '15px',
-    marginBottom: '50px'
   }
 })
 

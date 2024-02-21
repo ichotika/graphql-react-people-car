@@ -18,6 +18,7 @@ const PeopleCard = ({ id, firstName, lastName, detailPage=false }) => {
     setEditPersonId(id);
   }
 
+
   return (
     <div>
       {editMode ? (
@@ -52,7 +53,7 @@ const PeopleCard = ({ id, firstName, lastName, detailPage=false }) => {
 
 const getStyles = () => ({
   card: {
-    width: '800px'
+    width: '100%'
   }
 })
 

@@ -1,18 +1,22 @@
 import { useQuery } from '@apollo/client'
 import { GET_PEOPLE } from '../../graphql/queries'
-import { Divider, List } from 'antd'
+import { List } from 'antd'
 import PeopleCard from '../listItems/PeopleCard'
+import React, { useEffect } from "react";
 
 
 const People = () => {
   const styles = getStyles()
 
-  const { loading, error, data } = useQuery(GET_PEOPLE)
+  const { loading, error, data, refetch } = useQuery(GET_PEOPLE)
+
+  useEffect(() => {
+    refetch();
+  }, [refetch]);
 
   if (loading) return 'Loading...'
   if (error) return `Error! ${error.message}`
 
-  console.log('data', data)
 
   return (
     <div>
@@ -31,7 +35,7 @@ const People = () => {
 const getStyles = () => ({
   list: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
   }
 })
 

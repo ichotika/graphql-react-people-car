@@ -14,37 +14,21 @@ const Person = () => {
     variables: { id },
   });
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       await refetch();
-  //     } catch (error) {
-  //       console.error("Error refetching data:", error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, [id, refetch]);
 
   useEffect(() => {
     refetch();
-  }, [refetch]);
+  }, [id, refetch]);
 
 
 
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
 
-  console.log("Person", data);
-  console.log("data?.person", data?.person);
-  console.log("data?.car", data?.person.cars);
-
-  
 
   return (
-    <div>
-      <Link to="/" >
-       <p>Go Back</p>
+    <div className='App'>
+      <Link to="/" style={{alignSelf:"start", marginBottom: "2rem"}}>
+       <p>GO BACK HOME</p>
       </Link>
 
   

@@ -2,9 +2,7 @@ import { DeleteOutlined } from '@ant-design/icons'
 import { useMutation } from '@apollo/client'
 import { GET_PEOPLE,
   REMOVE_PERSON,
-  REMOVE_CARS_BY_PERSON_ID,
-  REMOVE_CAR,
-  GET_CARS,} from '../../graphql/queries'
+  } from '../../graphql/queries'
 import filter from 'lodash.filter'
 
 
@@ -27,7 +25,7 @@ const RemovePerson = ({ id }) => {
   const handleButtonClick = () => {
     let result = window.confirm('Are you sure you want to delete this person?')
     
-    console.log("remove person id",id)
+    // console.log("remove person id",id)
     if (result) {
       removePerson({
         variables: {

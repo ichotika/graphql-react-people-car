@@ -11,7 +11,6 @@ const AddCar = () => {
     const [addCar] = useMutation(ADD_CAR);
     const {loading, error, data } = useQuery(GET_PEOPLE);
     const [people, setPeople] = useState([]);
-    const styles = getStyles()
 
     useEffect(() => {
       if (data && data.people) {
@@ -52,20 +51,17 @@ const AddCar = () => {
     };
 
     return (
-        <div>
-        <Divider orientation="center" style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
-        Add Car
-        </Divider>
+        <div style={{display:"flex"}}>
         <Form
         name='add-car-form'
         layout='inline'
         size='large'
-        style={{ marginBottom: '40px' }}
+        style={{ marginBottom: '40px', justifyContent:"center", gap: "1rem" }}
         form={form}
         onFinish={onFinish}
       >
         <Form.Item
-        label='year'
+        label='Year'
           name='year'
           rules={[{ required: true, message: 'Please enter a a year' }]}
         >
@@ -76,7 +72,7 @@ const AddCar = () => {
           label="Make"
           rules={[{ required: true, message: "Please enter company name made the car" }]}
           >
-          <Input placeholder="Make" />
+          <Input placeholder="Make" style={{width: '150px'}}/>
       </Form.Item>
 
       <Form.Item
@@ -84,7 +80,7 @@ const AddCar = () => {
           label="Model"
           rules={[{ required: true, message: "Please enter the car model" }]}
         >
-          <Input placeholder="Model" />
+          <Input placeholder="Model" style={{width: '150px'}}/>
         </Form.Item>
 
         <Form.Item
@@ -122,12 +118,6 @@ const AddCar = () => {
     )
   }
   
-const getStyles = () => ({
-    title: {
-        fontSize: 20,
-        padding: '15px',
-        // marginBottom: '50px'
-    }
-})
+
 
 export default AddCar
