@@ -3,6 +3,6 @@
 
 #### server - graphQL
 
-#### client - react 
+#### client - reactjs
 
 #### router - apollo
