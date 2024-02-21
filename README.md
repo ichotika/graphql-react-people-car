@@ -1,9 +1,8 @@
 # graphql-react-people-car
 
-```
-server - graphQL
-```
-client - react 
-```
-router - apollo
-```
+
+#### server - graphQL
+
+#### client - react 
+
+#### router - apollo
