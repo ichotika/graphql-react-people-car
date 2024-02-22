@@ -1,5 +1,5 @@
 import lodash from "lodash";
-
+import { v4 as uuidv4 } from 'uuid';
 
 const people = [
   {
@@ -171,7 +171,7 @@ const resolvers = {
   Mutation: {
     addPerson: (root, args) => {
       const newPerson = {
-        id: Date.now().toString(),
+        id: uuidv4(),
         firstName: args.firstName,
         lastName: args.lastName,
       };
@@ -199,7 +199,7 @@ const resolvers = {
     },
     addCar: (root, args) => {
       const newCar = {
-        id: Date.now().toString(),
+        id: uuidv4(),
         year: args.year,
         make: args.make,
         model: args.model,
