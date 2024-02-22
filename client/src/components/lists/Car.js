@@ -16,7 +16,7 @@ const Car = ({id}) => {
   if (loading) return 'Loading...'
   if (error) return `Error! ${error.message}`
 
-  console.log('data from car component', data)
+  // console.log('data from car component', data)
 
   const filteredCars = data?.cars.filter(car => car.personId === id)
 

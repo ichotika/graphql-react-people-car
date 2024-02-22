@@ -1,5 +1,14 @@
 import { gql } from '@apollo/client'
 
+export const GET_PEOPLE_NUM = gql`
+  {
+    people {
+        id
+        firstName
+        lastName
+    }
+  }
+`;
 export const GET_PEOPLE = gql`
   {
     people {

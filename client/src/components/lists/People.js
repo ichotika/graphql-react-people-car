@@ -17,6 +17,7 @@ const People = () => {
   if (loading) return 'Loading...'
   if (error) return `Error! ${error.message}`
 
+  // console.log('data', data)
 
   return (
     <div>
