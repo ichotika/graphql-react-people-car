@@ -39,7 +39,7 @@ const AddPerson = () => {
   };
 
   return (
-    <div style={{display:"flex"}}>
+    <div style={{display:"flex", justifyContent:"center"}}>
       <Form
         name='add-person-form'
         layout='inline'
